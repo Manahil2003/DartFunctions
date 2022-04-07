@@ -1,0 +1,19 @@
+import 'dart:io';
+
+void max({required int a, required int b}) {
+  if (a > b) {
+    print("Maximum Number : $a");
+  } else {
+    print("Maximum Number : $b");
+  }
+}
+
+main() {
+  stdout.write("First Number : ");
+  int num1 = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Second Number : ");
+  int num2 = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  max(a: num1, b: num2);
+}
