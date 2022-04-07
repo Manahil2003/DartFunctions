@@ -1,0 +1,22 @@
+import 'dart:io';
+
+void Shape({required int n, required String c}) {
+  int i, j;
+  for (i = 0; i < n; i++) {
+    print("");
+    for (j = 1; j <= n; j++) {
+      print("$c");
+
+    }
+  }
+}
+
+main() {
+  stdout.write("Number : ");
+  int Num = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Character : ");
+  String ch = (stdin.readLineSync()!);
+
+  Shape(n: Num, c: ch);
+}
