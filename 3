@@ -1,0 +1,16 @@
+import 'dart:io';
+
+void table({required int x}) {
+  int p, n;
+  p = x - 1;
+  n = x + 1;
+  print("The number before $x if $p");
+  print("The number after $x is $n");
+}
+
+main() {
+  stdout.write("Number : ");
+  int num = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  table(x: num);
+}
