@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void grade(int m) {
+  if (m > 80) {
+    print("A");
+  } else if (m > 60) {
+    print("B");
+  } else if (m > 40) {
+    print("C");
+  } else {
+    print("F");
+  }
+}
+
+main() {
+  stdout.write("Integer : ");
+  int n = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  grade(n);
+}
