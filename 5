@@ -2,19 +2,32 @@ import 'dart:io';
 
 void nature({required int n}) {
   int i;
+  //c is used for checking prime numbers
   int c = 0;
+  //loop that runs until i is less than the number
   for (i = 2; i < n; i++) {
+    // this condition is for number 1 only .. if remainder is directly zero then number is 1 .
+
     if (n % i == 0) c = 1;
   }
+  // if number can be divided by 2 and  c is equal to zero then the number is prime number.
   if (n % 2 == 0 && c == 0) {
     print("$n is a prime number.");
-  } else if (n % 2 != 0 && c == 0) {
+  } 
+  //if number cannot be divided by 2 and c is equal to zero than number is odd and prime
+    else if (n % 2 != 0 && c == 0) {
     print("$n is a odd prime number.");
-  } else if (n % 2 == 0 && c != 0) {
+  } 
+  //if number can be divided by 2 and c is not equal to zero than the number is even and not prime .
+    else if (n % 2 == 0 && c != 0) {
     print("$n is only an even number,not prime.");
-  } else if (n % 2 != 0) {
+  }
+  //if number cannot be divided by 2 then the number is odd 
+   else if (n % 2 != 0) {
     print("$n is not an odd number, not prime.");
-  } else {
+  } else 
+  //numbers which do not satisfy any of the above condition then it is not a prime number
+  {
     print("$n is not a prime number .");
   }
 }
@@ -23,7 +36,7 @@ main() {
   stdout.write("Number : ");
   int num = int.tryParse(stdin.readLineSync()!) ?? 1;
   print("Nature of Number :");
-  print("---------------------");
+  print("------------------");
 
   nature(n: num);
 }
