@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void table({required int numb, required int Start, required int end}) {
+  for (int i = Start; i <= end; i++) {
+    print("$numb * $i = ${numb * i}");
+  }
+}
+
+main() {
+  stdout.write("Number : ");
+  int num = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Strting Number : ");
+  int Snum = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Ending Number : ");
+  int Enum = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  table(numb: num, Start: Snum, end: Enum);
+}
