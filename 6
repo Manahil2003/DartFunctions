@@ -1,0 +1,42 @@
+import 'dart:io';
+
+void operation({required int a, required int b, required String op}) {
+  switch (op) {
+    case '+':
+      print("$a + $b = ${a + b} ");
+      break;
+
+    case '-':
+      print("$a - $b = ${a - b} ");
+      break;
+
+    case '*':
+      print("$a * $b = ${a * b} ");
+      break;
+
+    case '/':
+      print("$a / $b = ${a / b} ");
+      break;
+
+    case '%':
+      print("$a % $b = ${a % b} ");
+      break;
+
+    default:
+      print("Invalid");
+      break;
+  }
+}
+
+main() {
+  stdout.write("Number : ");
+  int Num1 = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Number : ");
+  int Num2 = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Operator : ");
+  String Op = (stdin.readLineSync()!);
+
+  operation(a: Num1, b: Num2, op: Op);
+}
