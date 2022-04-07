@@ -1,0 +1,18 @@
+import 'dart:io';
+
+void factorial({required int n}) {
+  int i;
+  double fact;
+  fact = 1;
+  for (i = 1; i <= n; i++) {
+    fact *= i;
+  }
+  print("The number after $n is $fact");
+}
+
+main() {
+  stdout.write("Number : ");
+  int num = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  factorial(n: num);
+}
