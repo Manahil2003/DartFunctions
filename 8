@@ -1,0 +1,25 @@
+import 'dart:io';
+
+void Swap({required int var1, required int var2}) {
+  int a = var1;
+  int b = var2;
+
+  print("Values after swapping:");
+  print("a = $b");
+  print("b = $a");
+}
+
+main() {
+  stdout.write("Integer : ");
+  int a = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Integer : ");
+  int b = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  print("Values before swapping : ");
+  print("a = $a");
+  print("b = $b");
+
+  print("Swapping the values...");
+  Swap(var1: a, var2: b);
+}
