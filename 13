@@ -1,0 +1,27 @@
+import 'dart:io';
+
+void CD(int n, int p) {
+  while (n != p) {
+    if (n > p) {
+      n = n - p;
+    } else {
+      p = p - n;
+    }
+  }
+  print(n);
+  print("");
+  return;
+}
+
+main() {
+  stdout.write("Integer 1 : ");
+  int a = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Integer 2 : ");
+  int b = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  print("");
+  print("Common Divisor :");
+  CD(a, b);
+  print(CD);
+}
