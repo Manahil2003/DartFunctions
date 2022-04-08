@@ -1,0 +1,18 @@
+import 'dart:io';
+
+int mul(int globalInt) {
+  int m;
+  m = globalInt * 2;
+  print(m);
+  return m;
+}
+
+main() {
+  stdout.write("Value for Global variables : ");
+  int globalInt = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  print("");
+  print("Global variable multiplied by 2  :");
+  mul(globalInt);
+  print("");
+}
